@@ -14,6 +14,7 @@ class DefaultController extends Controller
     public function indexAction()
     {
         // replace this example code with whatever you need
-        return $this->render('default/index.html.twig');
+        $helloWorld = $this->get('translator')->trans('Hello World!');
+        return $this->render('default/index.html.twig', array('helloWorld' => $helloWorld));
     }
 }
