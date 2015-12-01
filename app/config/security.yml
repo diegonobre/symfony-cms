@@ -14,7 +14,7 @@ security:
         in_memory:
             memory:
                 users:
-                    admin: { password: adminpass, roles: ROLE_ADMIN }
+                    contato@diegonobre.net: { password: 123, roles: ROLE_ADMIN }
         user_db:
             entity: { class: AppBundle:CustomUser, property: username }
     firewalls:
