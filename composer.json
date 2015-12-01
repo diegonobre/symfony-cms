@@ -1,7 +1,13 @@
 {
-    "name": "diego/cms",
-    "license": "proprietary",
+    "name": "diegonobre/symfony-cms",
+    "license": "MIT",
     "type": "project",
+    "authors": [
+        {
+            "name": "Diego Nobre",
+            "email": "dcnobre@gmail.com"
+        }
+    ],
     "autoload": {
         "psr-4": {
             "": "src/",
@@ -10,7 +16,7 @@
     },
     "require": {
         "php": ">=5.3.9",
-        "symfony/symfony": "2.7.*",
+        "symfony/symfony": "2.8.*",
         "doctrine/orm": "^2.4.8",
         "doctrine/doctrine-bundle": "~1.4",
         "symfony/assetic-bundle": "~2.3",
