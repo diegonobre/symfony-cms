@@ -12,3 +12,6 @@
 
 # PHP Storm
 .idea/
+
+# GULP
+/node_modules

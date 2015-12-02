@@ -27,3 +27,9 @@ php app/console generate:doctrine:crud
 ```shell
 php app/console security:check
 ```
+
+## GULP
+```shell
+npm install
+gulp watch
+```
