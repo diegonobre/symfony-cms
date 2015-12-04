@@ -1,5 +1,5 @@
 <?php
-// src/AppBundle/Controller/SecurityController.php
+// assets/AppBundle/Controller/SecurityController.php
 
 namespace AppBundle\Controller;
 // ...
