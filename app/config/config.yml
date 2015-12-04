@@ -36,6 +36,12 @@ twig:
     debug:            "%kernel.debug%"
     strict_variables: "%kernel.debug%"
 
+# Gravatar Bundle
+ornicar_gravatar:
+  rating: g
+  size: 80
+  default: mm
+
 # Assetic Configuration
 assetic:
     debug:          "%kernel.debug%"
