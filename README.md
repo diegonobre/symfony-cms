@@ -1,7 +1,10 @@
 Symfony CMS
 ===========
+This is a sample project used to test some Symfony Bundles and feautures.
 
-## Create Symfony Project
+## How to Install
+
+### Create Symfony Project
 ```shell
 # create your Symfony Standard Project
 symfony new cms
@@ -10,17 +13,9 @@ cd cms/
 composer install
 ```
 
-## Create database using Doctrine
+### Create database using Doctrine
 ```shell
 php app/console doctrine:database:create
-```
-
-## Create CustomUserEntity
-```shell
-php app/console doctrine:generate:entity
-php app/console doctrine:schema:update --force
-# create complete CRUD using doctrine
-php app/console generate:doctrine:crud
 ```
 
 ## Running security check
@@ -28,8 +23,8 @@ php app/console generate:doctrine:crud
 php app/console security:check
 ```
 
-## GULP
+## Install or update GULP
 ```shell
 npm install
-gulp watch
+gulp
 ```
