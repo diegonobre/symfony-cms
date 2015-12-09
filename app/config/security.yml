@@ -10,11 +10,7 @@ security:
     providers:
         chain_providers:
             chain:
-                providers: [in_memory, user_db]
-        in_memory:
-            memory:
-                users:
-                    contato@diegonobre.net: { password: 123, roles: ROLE_ADMIN }
+                providers: [user_db]
         user_db:
             entity: { class: AppBundle:CustomUser, property: username }
     firewalls:

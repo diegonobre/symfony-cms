@@ -1,5 +1,6 @@
 {
     "name": "diegonobre/symfony-cms",
+    "description": "Demo application for study purpose using Symfony 2.8 (upgrading to 3.0)",
     "license": "MIT",
     "type": "project",
     "authors": [
