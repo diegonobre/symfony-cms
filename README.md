@@ -2,9 +2,10 @@ Symfony CMS
 ===========
 This is a sample project used to test some Symfony Bundles and feautures.
 
-[![Build Status](https://travis-ci.org/diegonobre/symfony-cms.svg?branch=master)](https://travis-ci.org/diegonobre/symfony-cms) 
-
 [![SensioLabsInsight](https://insight.sensiolabs.com/projects/8dac3c69-ddc1-4552-a07b-d1aa46fc5bd2/small.png)](https://insight.sensiolabs.com/projects/8dac3c69-ddc1-4552-a07b-d1aa46fc5bd2) 
+[![Build Status](https://travis-ci.org/diegonobre/symfony-cms.svg?branch=master)](https://travis-ci.org/diegonobre/symfony-cms) 
+[![Scrutinizer Code Quality](https://scrutinizer-ci.com/g/diegonobre/symfony-cms/badges/quality-score.png?b=master)](https://scrutinizer-ci.com/g/diegonobre/symfony-cms/?branch=master)
+[![Code Coverage](https://scrutinizer-ci.com/g/diegonobre/symfony-cms/badges/coverage.png?b=master)](https://scrutinizer-ci.com/g/diegonobre/symfony-cms/?branch=master)
 
 ## How to Install
 
