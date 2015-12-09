@@ -17,7 +17,7 @@ addons:
 
 before_script:
   - psql -c "create role symfony login superuser password 'symfony';" -U postgres
-  - psql -c 'create database symfony owner symfony;' -U postgres
+  - psql -c 'create database cms owner symfony;' -U postgres
   - composer selfupdate
   - composer install --dev --prefer-dist
 
