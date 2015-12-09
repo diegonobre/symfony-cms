@@ -21,3 +21,5 @@ before_script:
   - composer selfupdate
   - composer install --dev --prefer-dist
 
+script:
+  - ./bin/phpunit -c ap
