@@ -23,5 +23,5 @@ addons:
   postgresql: "9.3"
 
 before_script:
-  - psql -c 'create role symfony password '''symfony''';' -U postgres
+  - psql -c 'create role symfony password 'symfony';' -U postgres
   - psql -c 'create database symfony owner symfony;' -U postgres
