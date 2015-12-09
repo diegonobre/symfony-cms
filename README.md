@@ -6,6 +6,7 @@ This is a sample project used to test some Symfony Bundles and feautures.
 [![Build Status](https://travis-ci.org/diegonobre/symfony-cms.svg?branch=master)](https://travis-ci.org/diegonobre/symfony-cms) 
 [![Scrutinizer Code Quality](https://scrutinizer-ci.com/g/diegonobre/symfony-cms/badges/quality-score.png?b=master)](https://scrutinizer-ci.com/g/diegonobre/symfony-cms/?branch=master)
 [![Coverage Status](https://coveralls.io/repos/diegonobre/symfony-cms/badge.svg?branch=master&service=github)](https://coveralls.io/github/diegonobre/symfony-cms?branch=master)
+[![Dependency Status](https://www.versioneye.com/user/projects/566856b2fdeb51003700007d/badge.svg?style=flat)](https://www.versioneye.com/user/projects/566856b2fdeb51003700007d)
 
 ## How to Install
 
