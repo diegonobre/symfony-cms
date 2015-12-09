@@ -1,7 +1,7 @@
 {% extends '::admin.html.twig' %}
 
 {% block body -%}
-    <h1>CustomUser</h1>
+    <h1>Category</h1>
 
     <table class="record_properties">
         <tbody>
@@ -10,24 +10,20 @@
                 <td>{{ entity.id }}</td>
             </tr>
             <tr>
-                <th>Username</th>
-                <td>{{ entity.username }}</td>
-            </tr>
-            <tr>
-                <th>Password</th>
-                <td>{{ entity.password|slice(0,20) }}</td>
+                <th>Name</th>
+                <td>{{ entity.name }}</td>
             </tr>
         </tbody>
     </table>
 
         <ul class="record_actions">
     <li>
-        <a href="{{ path('cms_user') }}">
+        <a href="{{ path('cms_category') }}">
             Back to the list
         </a>
     </li>
     <li>
-        <a href="{{ path('cms_user_edit', { 'id': entity.id }) }}">
+        <a href="{{ path('cms_category_edit', { 'id': entity.id }) }}">
             Edit
         </a>
     </li>
