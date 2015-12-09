@@ -18,13 +18,53 @@ composer install
 php app/console doctrine:database:create
 ```
 
-## Running security check
-```shell
-php app/console security:check
-```
-
-## Install or update GULP
+### Install or update GULP
 ```shell
 npm install
 gulp
+```
+### Set file permissions
+```shell
+chmod a-x '.gitignore' \
+    'LICENSE' \
+    'README.md' \
+    'app/.htaccess' \
+    'app/AppCache.php' \
+    'app/AppKernel.php' \
+    'app/Resources/views/base.html.twig' \
+    'app/Resources/views/default/index.html.twig' \
+    'app/autoload.php' \
+    'app/config/config.yml' \
+    'app/config/config_dev.yml' \
+    'app/config/config_prod.yml' \
+    'app/config/config_test.yml' \
+    'app/config/parameters.yml.dist' \
+    'app/config/routing.yml' \
+    'app/config/routing_dev.yml' \
+    'app/config/security.yml' \
+    'app/config/services.yml' \
+    'app/phpunit.xml.dist' \
+    'composer.json' \
+    'composer.lock' \
+    'src/.htaccess' \
+    'src/AppBundle/AppBundle.php' \
+    'src/AppBundle/Controller/AdminController.php' \
+    'src/AppBundle/Controller/CustomUserController.php' \
+    'src/AppBundle/Controller/DefaultController.php' \
+    'src/AppBundle/Controller/SecurityController.php' \
+    'src/AppBundle/Entity/CustomUser.php' \
+    'src/AppBundle/Form/CustomUserType.php' \
+    'src/AppBundle/Resources/views/CustomUser/edit.html.twig' \
+    'src/AppBundle/Resources/views/CustomUser/index.html.twig' \
+    'src/AppBundle/Resources/views/CustomUser/new.html.twig' \
+    'src/AppBundle/Resources/views/CustomUser/show.html.twig' \
+    'src/AppBundle/Resources/views/Security/login.html.twig' \
+    'src/AppBundle/Resources/views/admin/index.html.twig' \
+    'web/.htaccess' \
+    'web/app.php'
+  ```
+
+### Running security check
+```shell
+php app/console security:check
 ```
