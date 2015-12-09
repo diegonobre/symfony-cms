@@ -1,12 +1,12 @@
 <?php
 
-namespace AppBundle\Form;
+namespace AppBundle\Form\Type;
 
 use Symfony\Component\Form\AbstractType;
 use Symfony\Component\Form\FormBuilderInterface;
 use Symfony\Component\OptionsResolver\OptionsResolverInterface;
 
-class PageType extends AbstractType
+class CustomUserType extends AbstractType
 {
     /**
      * @param FormBuilderInterface $builder
@@ -15,9 +15,8 @@ class PageType extends AbstractType
     public function buildForm(FormBuilderInterface $builder, array $options)
     {
         $builder
-            ->add('title')
-            ->add('content')
-            ->add('category')
+            ->add('username')
+            ->add('password', 'password')
         ;
     }
     
@@ -27,7 +26,7 @@ class PageType extends AbstractType
     public function setDefaultOptions(OptionsResolverInterface $resolver)
     {
         $resolver->setDefaults(array(
-            'data_class' => 'AppBundle\Entity\Page'
+            'data_class' => 'AppBundle\Entity\CustomUser'
         ));
     }
 
@@ -36,6 +35,6 @@ class PageType extends AbstractType
      */
     public function getName()
     {
-        return 'appbundle_page';
+        return 'appbundle_customuser';
     }
 }

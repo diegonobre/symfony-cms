@@ -1,12 +1,12 @@
 <?php
 
-namespace AppBundle\Form;
+namespace AppBundle\Form\Type;
 
 use Symfony\Component\Form\AbstractType;
 use Symfony\Component\Form\FormBuilderInterface;
 use Symfony\Component\OptionsResolver\OptionsResolverInterface;
 
-class CustomUserType extends AbstractType
+class CategoryType extends AbstractType
 {
     /**
      * @param FormBuilderInterface $builder
@@ -15,8 +15,7 @@ class CustomUserType extends AbstractType
     public function buildForm(FormBuilderInterface $builder, array $options)
     {
         $builder
-            ->add('username')
-            ->add('password', 'password')
+            ->add('name')
         ;
     }
     
@@ -26,7 +25,7 @@ class CustomUserType extends AbstractType
     public function setDefaultOptions(OptionsResolverInterface $resolver)
     {
         $resolver->setDefaults(array(
-            'data_class' => 'AppBundle\Entity\CustomUser'
+            'data_class' => 'AppBundle\Entity\Category'
         ));
     }
 
@@ -35,6 +34,6 @@ class CustomUserType extends AbstractType
      */
     public function getName()
     {
-        return 'appbundle_customuser';
+        return 'appbundle_category';
     }
 }

@@ -1,12 +1,12 @@
 <?php
 
-namespace AppBundle\Form;
+namespace AppBundle\Form\Type;
 
 use Symfony\Component\Form\AbstractType;
 use Symfony\Component\Form\FormBuilderInterface;
 use Symfony\Component\OptionsResolver\OptionsResolverInterface;
 
-class CategoryType extends AbstractType
+class PageType extends AbstractType
 {
     /**
      * @param FormBuilderInterface $builder
@@ -15,7 +15,9 @@ class CategoryType extends AbstractType
     public function buildForm(FormBuilderInterface $builder, array $options)
     {
         $builder
-            ->add('name')
+            ->add('title')
+            ->add('content')
+            ->add('category')
         ;
     }
     
@@ -25,7 +27,7 @@ class CategoryType extends AbstractType
     public function setDefaultOptions(OptionsResolverInterface $resolver)
     {
         $resolver->setDefaults(array(
-            'data_class' => 'AppBundle\Entity\Category'
+            'data_class' => 'AppBundle\Entity\Page'
         ));
     }
 
@@ -34,6 +36,6 @@ class CategoryType extends AbstractType
      */
     public function getName()
     {
-        return 'appbundle_category';
+        return 'appbundle_page';
     }
 }

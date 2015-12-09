@@ -8,7 +8,7 @@ use Sensio\Bundle\FrameworkExtraBundle\Configuration\Method;
 use Sensio\Bundle\FrameworkExtraBundle\Configuration\Route;
 use Sensio\Bundle\FrameworkExtraBundle\Configuration\Template;
 use AppBundle\Entity\CustomUser;
-use AppBundle\Form\CustomUserType;
+use AppBundle\Form\Type\CustomUserType;
 
 /**
  * CustomUser controller.
