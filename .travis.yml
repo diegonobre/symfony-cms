@@ -18,10 +18,10 @@ addons:
 before_script:
   - psql -c "create role symfony login superuser password 'symfony';" -U postgres
   - psql -c "create database cms owner symfony;" -U postgres
-  - php ./app/console doctrine:schema:update --force
-  - psql -c "INSERT INTO custom_user (username) VALUES ('dcnobre@gmail.com');" -U postgres
   - composer selfupdate
   - composer install --dev --prefer-dist
+  - php ./app/console doctrine:schema:update --force
+  - psql -c "INSERT INTO custom_user (username) VALUES ('dcnobre@gmail.com');" -U postgres
 
 script:
   - ./bin/phpunit -c app --coverage-clover build/logs/clover.xml
