@@ -21,7 +21,7 @@ before_script:
   - composer selfupdate
   - composer install --dev --prefer-dist
   -  php ./app/console doctrine:schema:create --env=test
-  - psql -c "INSERT INTO custom_user (username) VALUES ('dcnobre@gmail.com');" -U postgres
+  - psql -c "INSERT INTO custom_user (username) VALUES ('dcnobre@gmail.com');" -d cms -U postgres
 
 script:
   - ./bin/phpunit -c app --coverage-clover build/logs/clover.xml
