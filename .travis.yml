@@ -23,7 +23,7 @@ before_script:
 
 script:
   - mkdir -p build/logs
-  - ./bin/phpunit -c app --coverage-clover build/logs/clover.xml
+  - ./bin/phpunit -c app --coverage-clover coverage.xml
 
 after_script:
   - php ./bin/coveralls -v
