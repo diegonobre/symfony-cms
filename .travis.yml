@@ -24,7 +24,7 @@ before_script:
   - psql -c "INSERT INTO custom_user (id, username, password) VALUES (1, 'dcnobre@gmail.com', '$2y$10$CnkaGow4GAg1Xx0l7CHWAe37ciknx60LNnYVXucLie3ljk9mt5epO');" -d cms -U postgres
 
 script:
-  - ./bin/phpunit -c app --coverage-clover build/logs/clover.xml
+  - ./bin/phpunit -c app --coverage-clover coverage.xml
 
 after_script:
   - php ./bin/coveralls -v
