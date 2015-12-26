@@ -3,8 +3,7 @@
 namespace AppBundle\Tests\Controller;
 
 use Symfony\Bundle\FrameworkBundle\Test\WebTestCase;
-use Symfony\Component\BrowserKit\Cookie;
-use Symfony\Component\Security\Core\Authentication\Token\UsernamePasswordToken;
+use AppBundle\Tests\Util\AuthenticatedClient;
 
 /**
  * Class AdminControllerTest
@@ -20,26 +19,12 @@ class AdminControllerTest extends WebTestCase
 
     public function setUp()
     {
-        $this->client = static::createClient();
+        $this->client = AuthenticatedClient::login();
         $this->container = static::$kernel->getContainer();
-    }
-
-    protected function loginAs($username)
-    {
-        $session = $this->container->get('session');
-        $person = self::$kernel->getContainer()->get('doctrine')->getRepository('AppBundle:CustomUser')->findOneByUsername($username);
-
-        $token = new UsernamePasswordToken($person, null, 'main', $person->getRoles());
-        $session->set('_security_main', serialize($token));
-        $session->save();
-
-        $this->client->getCookieJar()->set(new Cookie($session->getName(), $session->getId()));
     }
 
     public function testIndex()
     {
-        $this->loginAs('dcnobre@gmail.com');
-
         $crawler = $this->client->request('GET', '/admin');
         $this->assertEquals(200, $this->client->getResponse()->getStatusCode());
         $this->assertContains('Dashboard', $crawler->filter('h1')->text());
