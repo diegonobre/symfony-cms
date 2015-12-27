@@ -7,7 +7,7 @@ use AppBundle\Tests\Util\AuthenticatedClient;
 
 class CategoryControllerTest extends WebTestCase
 {
-    private $client;
+    private $client = null;
 
     public function setUp()
     {
