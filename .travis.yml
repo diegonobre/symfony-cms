@@ -19,7 +19,7 @@ before_script:
   - psql -c "create role symfony login superuser password 'symfony';" -U postgres
   - psql -c "create database cms owner symfony;" -U postgres
   - composer selfupdate
-  - composer install --dev --prefer-dist
+  - composer install --prefer-dist
   - php ./app/console doctrine:schema:create --env=test
   - psql -c "INSERT INTO custom_user (id, username, password) VALUES (1, 'dcnobre@gmail.com', '$2y$10$CnkaGow4GAg1Xx0l7CHWAe37ciknx60LNnYVXucLie3ljk9mt5epO');" -d cms -U postgres
 
