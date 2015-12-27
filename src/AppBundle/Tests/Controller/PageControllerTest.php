@@ -29,8 +29,7 @@ class PageControllerTest extends WebTestCase
         // Fill in the form and submit it
         $form = $crawler->selectButton('Create')->form(array(
             'appbundle_page[title]'  => 'Test title',
-            'appbundle_page[content]' => 'Test content',
-            'appbundle_page[category]' => 1
+            'appbundle_page[content]' => 'Test content'
         ));
 
         $this->client->submit($form);
