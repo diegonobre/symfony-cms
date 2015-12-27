@@ -2,53 +2,67 @@
 
 namespace AppBundle\Tests\Controller;
 
+use AppBundle\Tests\Util\AuthenticatedClient;
 use Symfony\Bundle\FrameworkBundle\Test\WebTestCase;
 
 class PageControllerTest extends WebTestCase
 {
+    private $client = null;
+
+    public function setUp()
+    {
+        $this->client = AuthenticatedClient::login();
+    }
+
     public function testCompleteScenario()
     {
-        $this->markTestSkipped('Not implemented');
-
-        // Create a new client to browse the application
-        $client = static::createClient();
-
         // Create a new entry in the database
-        $crawler = $client->request('GET', '/cms/page/');
-        $this->assertEquals(200, $client->getResponse()->getStatusCode(), "Unexpected HTTP status code for GET /cms/page/");
-        $crawler = $client->click($crawler->selectLink('Create a new entry')->link());
+        $crawler = $this->client->request('GET', '/cms/page/');
+        $this->assertEquals(200,
+            $this->client->getResponse()->getStatusCode(),
+            "Unexpected HTTP status code for GET /cms/page/");
+
+        $crawler = $this->client->click(
+            $crawler->selectLink('Create a new entry')->link()
+        );
 
         // Fill in the form and submit it
         $form = $crawler->selectButton('Create')->form(array(
-            'appbundle_page[field_name]'  => 'Test',
-            // ... other fields to fill
+            'appbundle_page[title]'  => 'Test title',
+            'appbundle_page[content]' => 'Test content',
+            'appbundle_page[category]' => 1
         ));
 
-        $client->submit($form);
-        $crawler = $client->followRedirect();
+        $this->client->submit($form);
+        $crawler = $this->client->followRedirect();
 
         // Check data in the show view
-        $this->assertGreaterThan(0, $crawler->filter('td:contains("Test")')->count(), 'Missing element td:contains("Test")');
+        $this->assertGreaterThan(0,
+            $crawler->filter('td:contains("Test title")')->count(),
+            'Missing element td:contains("Test title")');
 
         // Edit the entity
-        $crawler = $client->click($crawler->selectLink('Edit')->link());
+        $crawler = $this->client->click($crawler->selectLink('Edit')->link());
 
         $form = $crawler->selectButton('Update')->form(array(
-            'appbundle_page[field_name]'  => 'Foo',
-            // ... other fields to fill
+            'appbundle_page[title]'  => 'Test title update',
+            'appbundle_page[content]' => 'Test content update'
         ));
 
-        $client->submit($form);
-        $crawler = $client->followRedirect();
+        $this->client->submit($form);
+        $crawler = $this->client->followRedirect();
 
         // Check the element contains an attribute with value equals "Foo"
-        $this->assertGreaterThan(0, $crawler->filter('[value="Foo"]')->count(), 'Missing element [value="Foo"]');
+        $this->assertGreaterThan(0,
+            $crawler->filter('[value="Test title update"]')->count(),
+            'Missing element [value="Test title update"]');
 
         // Delete the entity
-        $client->submit($crawler->selectButton('Delete')->form());
-        $crawler = $client->followRedirect();
+        $this->client->submit($crawler->selectButton('Delete')->form());
+        $crawler = $this->client->followRedirect();
 
         // Check the entity has been delete on the list
-        $this->assertNotRegExp('/Foo/', $client->getResponse()->getContent());
+        $this->assertNotRegExp('/Test+title+update/',
+            $this->client->getResponse()->getContent());
     }
 }
