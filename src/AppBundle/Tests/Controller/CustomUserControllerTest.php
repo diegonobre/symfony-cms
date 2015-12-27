@@ -26,7 +26,7 @@ class CustomUserControllerTest extends WebTestCase
         // Fill in the form and submit it
         $form = $crawler->selectButton('Create')->form(array(
             'appbundle_customuser[username]' => 'user@test.com',
-            'appbundle_customuser[password]' => '123'
+            'appbundle_customuser[password]' => '$2y$10$CnkaGow4GAg1Xx0l7CHWAe37ciknx60LNnYVXucLie3ljk9mt5epO'
         ));
 
         $this->client->submit($form);
