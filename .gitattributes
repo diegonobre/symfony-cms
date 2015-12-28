@@ -1,0 +1,12 @@
+# @see https://github.com/github/linguist#troubleshooting
+# JS from vendors
+app/Resources/assets/js/plugins/* linguist-vendored
+app/Resources/assets/js/bootstrap.js linguist-vendored
+app/Resources/assets/js/demo.js linguist-vendored
+app/Resources/assets/js/app.min.js linguist-vendored
+# CSS from vendors
+app/Resources/assets/css/skins/* linguist-vendored
+app/Resources/assets/css/AdminLTE.min.css linguist-vendored
+app/Resources/assets/css/bootstrap.css linguist-vendored
+app/Resources/assets/css/ionicons.css linguist-vendored
+
