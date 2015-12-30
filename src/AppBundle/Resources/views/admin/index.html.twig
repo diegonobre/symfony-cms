@@ -6,12 +6,12 @@
     <!-- Content Header (Page header) -->
     <section class="content-header">
         <h1>
-            Dashboard
-            <small>Welcome to your dashboard</small>
+            {{ 'Dashboard'|trans }}
+            <small>{{ 'Hello World!'|trans }}</small>
         </h1>
         <ol class="breadcrumb">
-            <li><a href="#"><i class="fa fa-dashboard"></i> Home</a></li>
-            <li class="active">Dashboard</li>
+            <li><a href="#"><i class="fa fa-dashboard"></i> {{ 'Home'|trans }}</a></li>
+            <li class="active">{{ 'Dashboard'|trans }}</li>
         </ol>
     </section>
 
@@ -25,4 +25,3 @@
     </section>
     <!-- /.content -->
 {% endblock %}
-
