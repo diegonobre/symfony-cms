@@ -12,8 +12,6 @@ class AdminController extends Controller
      */
     public function indexAction()
     {
-        // replace this example code with whatever you need
-        $helloWorld = $this->get('translator')->trans('Hello World!');
-        return $this->render('AppBundle:admin:index.html.twig', array('helloWorld' => $helloWorld));
+        return $this->render('AppBundle:admin:index.html.twig');
     }
 }
