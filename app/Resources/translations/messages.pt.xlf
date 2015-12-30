@@ -1,0 +1,43 @@
+<?xml version="1.0"?>
+<xliff version="1.2" xmlns="urn:oasis:names:tc:xliff:document:1.2">
+    <file source-language="en" datatype="plaintext" original="file.ext">
+        <body>
+            <trans-unit id="1">
+                <source>Hello World!</source>
+                <target>Olá Mundo!</target>
+            </trans-unit>
+            <trans-unit id="2">
+                <source>Dashboard</source>
+                <target>Painel</target>
+            </trans-unit>
+            <trans-unit id="3">
+                <source>Home</source>
+                <target>Início</target>
+            </trans-unit>
+            <trans-unit id="4">
+                <source>Logout</source>
+                <target>Sair</target>
+            </trans-unit>
+            <trans-unit id="5">
+                <source>Important</source>
+                <target>Importante</target>
+            </trans-unit>
+            <trans-unit id="6">
+                <source>Warning</source>
+                <target>Atenção</target>
+            </trans-unit>
+            <trans-unit id="7">
+                <source>Information</source>
+                <target>Informação</target>
+            </trans-unit>
+            <trans-unit id="8">
+                <source>MAIN NAVIGATION</source>
+                <target>NAVEGAÇÃO PRINCIPAL</target>
+            </trans-unit>
+            <trans-unit id="9">
+                <source>Search</source>
+                <target>Pesquisar</target>
+            </trans-unit>
+        </body>
+    </file>
+</xliff>
