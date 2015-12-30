@@ -1,15 +1,41 @@
 {% extends '::admin.html.twig' %}
+{% form_theme form 'form/bootstrap_3_horizontal_layout.html.twig' %}
 
 {% block body -%}
-    <h1>Category creation</h1>
+<!-- Content Header (Page header) -->
+<section class="content-header">
+    <h1>
+        General Form Elements
+        <small>Preview</small>
+    </h1>
+    <ol class="breadcrumb">
+        <li><a href="#"><i class="fa fa-dashboard"></i> Home</a></li>
+        <li><a href="#">Forms</a></li>
+        <li class="active">General Elements</li>
+    </ol>
+</section>
 
-    {{ form(form) }}
+<!-- Main content -->
+<section class="content">
+    <div class="row">
+        <div class="col-md-12">
+            <!-- Horizontal Form -->
+            <div class="box box-info">
+                <div class="box-header with-border">
+                    <h3 class="box-title">Category creation</h3>
+                </div>
 
-        <ul class="record_actions">
-    <li>
-        <a href="{{ path('cms_category') }}">
-            Back to the list
-        </a>
-    </li>
-</ul>
+                {{ form(form) }}
+
+                <ul class="record_actions">
+                    <li>
+                        <a href="{{ path('cms_category') }}">
+                            Back to the list
+                        </a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </div>
+</section>
 {% endblock %}
