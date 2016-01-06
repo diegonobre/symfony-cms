@@ -26,6 +26,8 @@ before_script:
 script:
   - mkdir -p build/logs
   - ./bin/phpunit -c app --coverage-clover build/logs/clover.xml
+  - wget https://scrutinizer-ci.com/ocular.phar
+  - php ocular.phar code-coverage:upload --access-token="8088c936e7e4c38a62a8bda5c95ca6775a1a802ff9d005244aba4fba96e5415d" --format=php-clover build/logs/clover.xml
 
 after_script:
   - php ./bin/coveralls -v
