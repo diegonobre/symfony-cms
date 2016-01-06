@@ -55,7 +55,6 @@ class CategoryControllerTest extends WebTestCase
 
         // Delete the entity
         $this->client->submit($crawler->selectButton('Delete')->form());
-        $crawler = $this->client->followRedirect();
 
         // Check the entity has been delete on the list
         $this->assertNotRegExp('/Foo/', $this->client->getResponse()->getContent());
