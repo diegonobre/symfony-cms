@@ -3,6 +3,7 @@
 namespace AppBundle\Entity;
 
 use Doctrine\ORM\Mapping as ORM;
+use Symfony\Component\Security\Core\Role\Role;
 use Symfony\Component\Security\Core\User\UserInterface;
 
 /**
@@ -80,7 +81,7 @@ class CustomUser implements UserInterface
      */
     public function setPassword($password)
     {
-        $this->password = password_hash($password, PASSWORD_BCRYPT);
+        $this->password = (string) password_hash($password, PASSWORD_BCRYPT);
 
         return $this;
     }
@@ -106,7 +107,7 @@ class CustomUser implements UserInterface
 
     public function getRoles()
     {
-        return array('ROLE_ADMIN');
+        return array(new Role('ROLE_ADMIN'));
     }
 
     public function eraseCredentials()
