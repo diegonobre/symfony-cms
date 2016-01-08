@@ -1,6 +1,6 @@
 Symfony CMS
 ===========
-This is a sample project used to test some Symfony Bundles and feautures.
+Sample project used to test some Symfony Bundles and features.
 
 [![Build Status](https://travis-ci.org/diegonobre/symfony-cms.svg?branch=master)](https://travis-ci.org/diegonobre/symfony-cms) 
 [![Scrutinizer Code Quality](https://scrutinizer-ci.com/g/diegonobre/symfony-cms/badges/quality-score.png?b=master)](https://scrutinizer-ci.com/g/diegonobre/symfony-cms/?branch=master)
@@ -9,26 +9,26 @@ This is a sample project used to test some Symfony Bundles and feautures.
 
 ## How to Install
 
-### Create Symfony Project
 ```shell
-# create your Symfony Standard Project
-symfony new cms
-cd cms/
+git clone git@github.com:diegonobre/symfony-cms.git
+cd symfony-cms
 # download necessary libraries
 composer install
 ```
 
-### Create database using Doctrine
+## Create database using Doctrine
 ```shell
 php app/console doctrine:database:create
 ```
 
-### Install or update GULP
+## Install/update GULP
 ```shell
-npm install
+sudo npm update
+sudo npm install
 gulp
 ```
-### Set file permissions
+
+## Set file permissions
 ```shell
 chmod a-x '.gitignore' \
     'LICENSE' \
@@ -69,7 +69,12 @@ chmod a-x '.gitignore' \
     'web/app.php'
   ```
 
-### Running security check
+## Run security check
 ```shell
 php app/console security:check
+```
+
+## Run unit tests
+```shell
+bin/phpunit -c app
 ```
