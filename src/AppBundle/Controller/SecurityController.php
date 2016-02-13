@@ -2,8 +2,7 @@
 // assets/AppBundle/Controller/SecurityController.php
 
 namespace AppBundle\Controller;
-// ...
-use Symfony\Component\HttpFoundation\Request;
+
 use Symfony\Bundle\FrameworkBundle\Controller\Controller;
 use Sensio\Bundle\FrameworkExtraBundle\Configuration\Route;
 
