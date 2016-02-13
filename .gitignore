@@ -11,8 +11,10 @@
 /vendor/
 /web/bundles/
 
-# PHP Storm
+# IDE Files
 .idea/
+/.buildpath
+/.project
 
 # GULP
 /node_modules
